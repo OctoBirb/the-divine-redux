@@ -1,7 +1,9 @@
-table, th, td {
-    border: 2px solid black;
+body {
+    font-family: sans-serif;
 }
 th, td {
+    border: 2px solid black;
+    border-radius: 4px;
     padding: 5px;
     width: 33.3%;
     text-align: center;
