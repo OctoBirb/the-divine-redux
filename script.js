@@ -45,5 +45,5 @@ function update() {
 
 window.setInterval(function() {
     update()
-    units.u += (Math.round(UG1.have * UG1.bups * 2) / 100)
+    units.u += (cps / 50)
 }, 50)
