@@ -45,5 +45,5 @@ function update() {
 
 window.setInterval(function() {
     update()
-    units.u += (cps / 10)
-}, 100)
+    units.u += cps
+}, 1000)
