@@ -1,10 +1,24 @@
 body {
-    font-family: sans-serif;
+    font-family: Comfortaa;
+    background-color: #0f0f0f;
+    color: white;
 }
 table, th, td {
-    border: 2px solid black;
+    border: 2px solid white;
     border-radius: 4px;
     padding: 5px;
     width: 33.3%;
     text-align: center;
+}
+button {
+    font-family: Comfortaa;
+    background-color: #0f0f0f;
+    color: white;
+    padding: 5px;
+    border: 2px solid #08f;
+    border-radius: 4px;
+}
+
+th, td {
+    height: 1.5cm
 }

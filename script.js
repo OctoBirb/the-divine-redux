@@ -42,7 +42,7 @@ function update() {
     units.u = units.u + (cps / 20)
     ud("uunits-a", `${Math.trunc(units.u)} units`)
     ud("uunits-b", `${Math.trunc(cps * 10) / 10} units/s`)
-    ud("uunits-cb", `Buy megaunit generator 1 (Cost: ${Math.trunc(UG1.cost)})`)
+    ud("uunits-cb", `Buy unit generator 1 (Cost: ${Math.trunc(UG1.cost)})`)
 }
 
 window.setInterval(function() {
