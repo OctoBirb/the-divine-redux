@@ -39,11 +39,12 @@ var costscaling = 1.15
 
 function update() {
     var cps = (UG1.have * UG1.bups) + (0)
-    units.u = units.u + cps
+    units.u = units.u + (cps / 20)
     ud("uunits-a", `${Math.trunc(units.u)} units`)
     ud("uunits-b", `${Math.trunc(cps * 10) / 10} units/s`)
+    ud("uunits-cb", `Buy megaunit generator 1 (Cost: ${Math.trunc(UG1.cost)})`)
 }
 
 window.setInterval(function() {
     update()
-}, 1000)
+}, 50)
