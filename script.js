@@ -38,12 +38,12 @@ var costscaling = 1.15
 /////////////////////////////////////////////////////////UPDATING
 
 function update() {
+    var cps = (UG1.have * UG1.bups) + (0)
     ud("uunits-a", `${Math.trunc(units.u)} units`)
-    ud("uunits-b", `${Math.trunc(cps)} units/s`)
+    ud("uunits-b", `${Math.trunc(cps * 10) / 10} units/s`)
 }
 
 window.setInterval(function() {
     update()
     units.u += (Math.round(UG1.have * UG1.bups * 2) / 100)
-    var cps = (UG1.have * UG1.bups) + (0)
 }, 50)
