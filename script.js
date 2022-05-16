@@ -34,7 +34,6 @@ function buyUG1() {
 //////////////////////////////////////////////////OTHER VARIABLES
 
 var costscaling = 1.15
-cps = (UG1.have * UG1.bups) + (0)
 
 /////////////////////////////////////////////////////////UPDATING
 
@@ -46,4 +45,5 @@ function update() {
 window.setInterval(function() {
     update()
     units.u += (Math.round(UG1.have * UG1.bups * 2) / 100)
+    cps = (UG1.have * UG1.bups) + (0)
 }, 50)
