@@ -14,6 +14,11 @@ a0.0.1_4 - some more buttons - i'm 1/3 of the way to 0.02 (also text on the butt
 a0.0.1_5 to a0.0.1_f - a lot of refresh rate changing, until i realized that my school computer was bad
 <br>
 a0.0.1_x - a lot more html, but not enough js
+<br>
 a0.0.1_y - a lot more css
+<br>
+a0.0.1_z - uhhhhh i forgot what happened here
+<br>
+a0.0.1_10 - well at least the cps is fixed so that it includes the mult
 
 **a0.0.2** - all 9 generators are complete
