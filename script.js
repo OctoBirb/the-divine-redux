@@ -2,12 +2,10 @@ var ud=(x,y)=>{document.getElementById(x).innerText=y}
 
 ////////////////////////////////////////////////////////////UNITS
 
-var units = {
-    u: 0,
-}
+var units = 0
 
 function getUnit(x) {
-    units.u = units.u + x
+    units = units + x
 }
 
 /////////////////////////////////////////////GENERATORS FOR UNITS
@@ -57,8 +55,8 @@ var MG2 = {
 ///////////////////////////////////////////////////////////BUYING
 
 function buyUG1() {
-    if (units.u >= UG1.cost) {
-        units.u -= UG1.cost
+    if (units >= UG1.cost) {
+        units -= UG1.cost
         UG1.have += 1
         UG1.cost *= costscaling
     } else {
@@ -67,8 +65,8 @@ function buyUG1() {
 }
 
 function buyUG2() {
-    if (units.u >= UG2.cost) {
-        units.u -= UG2.cost
+    if (units >= UG2.cost) {
+        units -= UG2.cost
         UG2.have += 1
         UG2.cost *= costscaling
     } else {
@@ -77,8 +75,8 @@ function buyUG2() {
 }
 
 function buyKG1() {
-    if (units.u >= KG1.cost) {
-        units.u -= KG1.cost
+    if (units >= KG1.cost) {
+        units -= KG1.cost
         KG1.have += 1
         KG1.cost *= costscaling
     } else {
@@ -87,8 +85,8 @@ function buyKG1() {
 }
 
 function buyKG2() {
-    if (units.u >= UG2.cost) {
-        units.u -= KG2.cost
+    if (units >= UG2.cost) {
+        units -= KG2.cost
         KG2.have += 1
         KG2.cost *= costscaling
     } else {
@@ -97,8 +95,8 @@ function buyKG2() {
 }
 
 function buyMG1() {
-    if (units.u >= MG1.cost) {
-        units.u -= MG1.cost
+    if (units >= MG1.cost) {
+        units -= MG1.cost
         MG1.have += 1
         MG1.cost *= costscaling
     } else {
@@ -107,8 +105,8 @@ function buyMG1() {
 }
 
 function buyMG2() {
-    if (units.u >= MG2.cost) {
-        units.u -= MG2.cost
+    if (units >= MG2.cost) {
+        units -= MG2.cost
         MG2.have += 1
         MG2.cost *= costscaling
     } else {
@@ -123,11 +121,13 @@ var costscaling = 1.15
 /////////////////////////////////////////////////////////UPDATING
 
 function update() {
-    var cps = (UG1.have * UG1.bups) + (0)
-    units.u = units.u + (cps / 20)
-    ud("uunits-a", `${Math.trunc(units.u)} units`)
+    var cps = (UG1.have * UG1.bups * UG1.mult) + (0)
+    units = units + (cps / 20)
+    ud("uunits-a", `${Math.trunc(units)} units`)
     ud("uunits-b", `${Math.trunc(cps * 10) / 10} units/s`)
     ud("uunits-cb", `Buy unit generator 1 (Cost: ${Math.trunc(UG1.cost)})`)
+    ud("kunits-cb", `Buy kilounit generator 1 (Cost: ${Math.trunc(KG1.cost)})`)
+    ud("munits-cb", `Buy megaunit generator 1 (Cost: ${Math.trunc(MG1.cost)})`)
 }
 
 window.setInterval(function() {
